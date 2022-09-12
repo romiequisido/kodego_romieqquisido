@@ -6,8 +6,10 @@ fun main(){
     }
 
     var grade : Int = 75
-    if ( grade >=75 ){
+    if ( grade >=75 ) {
         println("You passed!!!")
+    }else{
+        println("You failed!")
     }
 
     //range

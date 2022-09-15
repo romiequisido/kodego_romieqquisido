@@ -1,10 +1,14 @@
 fun main(){
     var joe = Person("Joe", 21)
-    println("**********")
-    println("${joe.name}'s current age is ${joe.age}")
-    println("After 1 year....")
-    joe.ageUp()
-    println("${joe.name}'s current age is ${joe.age}")
+    joe.displayAge()
+
+    var ann = Person("Anna")
+//    var joe = Person("Joe", 21)
+//    println("**********")
+//    println("${joe.name}'s current age is ${joe.age}")
+//    println("After 1 year....")
+//    joe.ageUp()
+//    println("${joe.name}'s current age is ${joe.age}")
 
 //    var joe  = Person("Joe", 21)
 //    var anna = Person("Anna", 21)
@@ -27,7 +31,7 @@ fun main(){
 //    mark.eat()
 }
 
-class Person (var name: String, var age:Int){ //constructor
+class Person (var name: String, var age:Int){ //constructor ->primary constructor
     //var name : String = "John"
     //var age : Int = 21
     //var name:String = personName
@@ -37,7 +41,11 @@ class Person (var name: String, var age:Int){ //constructor
         println("Object Created")
         println("name is $name")
         println("age is $age")
+
     }
+        //secondary constructor
+        constructor(name:String):this(name, 0)
+
 
     fun walk(){
         println("A person walks")
